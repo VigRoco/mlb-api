@@ -1,0 +1,30 @@
+{
+    "name": "vigroco/mlb-api-php",
+    "description": "A simple PHP library for using the official MLB API.",
+    "type": "library",
+    "license": "MIT",
+    "platform": {
+        "php": "8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "VigRoco\\MlbApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jason Craft",
+            "email": "jason@nationsphere.net"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0",
+        "monolog/monolog": "^3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.2"
+    },
+    "scripts": {
+        "test": "phpunit tests"
+    }
+}
