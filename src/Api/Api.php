@@ -1,6 +1,6 @@
 <?php
 
-namespace VigRoco\MlbApi\Api;
+namespace MlbApi\Api;
 
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestInterface;

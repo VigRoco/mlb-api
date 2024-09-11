@@ -1,6 +1,6 @@
 <?php
 
-namespace VigRoco\MlbApi\Models;
+namespace MlbApi\Models;
 
 class People extends Model
 {
@@ -8,7 +8,8 @@ class People extends Model
         int $id,
         public readonly string $fullName,
         public readonly string $firstName,
-        public readonly string $lastName
+        public readonly string $lastName,
+        public readonly string $link
     ) {
         parent::__construct($id);
     }

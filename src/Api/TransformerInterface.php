@@ -1,9 +1,9 @@
 <?php
 
-namespace VigRoco\MlbApi\Api;
+namespace MlbApi\Api;
 
 use Psr\Http\Message\ResponseInterface;
-use VigRoco\MlbApi\Models\Model;
+use MlbApi\Models\Model;
 
 interface TransformerInterface
 {

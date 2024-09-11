@@ -8,7 +8,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VigRoco\\MlbApi\\": "src/"
+            "MlbApi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MlbApi\\Test\\": "tests/"
         }
     },
     "authors": [

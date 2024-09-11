@@ -1,8 +1,10 @@
 <?php
 
+namespace MlbApi\Api\Test;
+
 use GuzzleHttp\Client;
 use PHPUnit\Framework\TestCase;
-use VigRoco\MlbApi\Api\transformers\GameFeedTransformer;
+use MlbApi\Api\Transformers\GameFeedTransformer;
 
 class GameFeedIntegrationTest extends TestCase
 {

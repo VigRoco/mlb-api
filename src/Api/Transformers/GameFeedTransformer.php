@@ -1,14 +1,14 @@
 <?php
 
-namespace VigRoco\MlbApi\Api\Transformers;
+namespace MlbApi\Api\Transformers;
 
 use Psr\Http\Message\ResponseInterface;
-use VigRoco\MlbApi\Api\TransformerInterface;
-use VigRoco\MlbApi\Models\GameFeed;
-use VigRoco\MlbApi\Models\Model;
-use VigRoco\MlbApi\Models\People;
-use VigRoco\MlbApi\Models\Team;
-use VigRoco\MlbApi\Models\Venue;
+use MlbApi\Api\TransformerInterface;
+use MlbApi\Models\GameFeed;
+use MlbApi\Models\Model;
+use MlbApi\Models\People;
+use MlbApi\Models\Team;
+use MlbApi\Models\Venue;
 
 class GameFeedTransformer implements TransformerInterface
 {
@@ -28,12 +28,10 @@ class GameFeedTransformer implements TransformerInterface
             $gameFeed["gameData"]["venue"]["season"]
         );
 
-        $players = array_map(function ($player) {
+        $people_class_vars = get_class_vars(People::class);
+        $players = array_map(function (array $player) use($people_class_vars) {
             return new People(
-                $player["id"],
-                $player["fullName"],
-                $player["firstName"],
-                $player["lastName"],
+                ...array_intersect_key($player, $people_class_vars)
             );
         }, $gameFeed["gameData"]["players"]);
 

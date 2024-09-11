@@ -1,6 +1,6 @@
 <?php
 
-namespace VigRoco\MlbApi\Models;
+namespace MlbApi\Models;
 
 class Model
 {
