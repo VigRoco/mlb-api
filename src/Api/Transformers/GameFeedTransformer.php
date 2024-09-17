@@ -30,9 +30,10 @@ class GameFeedTransformer implements TransformerInterface
 
         $people_class_vars = get_class_vars(People::class);
         $players = array_map(function (array $player) use($people_class_vars) {
-            return new People(
-                ...array_intersect_key($player, $people_class_vars)
-            );
+            return People::fromArray($player);
+            // return new People(
+            //     ...array_intersect_key($player, $people_class_vars)
+            // );
         }, $gameFeed["gameData"]["players"]);
 
         $homeTeam = new Team(
