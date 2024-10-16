@@ -2,15 +2,15 @@
 
 namespace MlbApi\Models;
 
-class People
+final readonly class People
 {
     use ModelTrait;
 
     public function __construct(
-        public readonly int $id,
-        public readonly string $fullName,
-        public readonly string $firstName,
-        public readonly string $lastName,
-        public readonly string $link
+        public int $id,
+        public string $fullName,
+        public string $firstName,
+        public string $lastName,
+        public string $link
     ) {}
 }
